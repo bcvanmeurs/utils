@@ -5,6 +5,25 @@ import subprocess
 
 dependabot_path = ".github/dependabot.yml"
 
+dependency_files = [
+    "pyproject.toml",
+    "requirements.txt",
+]
+
+
+# Not used
+def find_dependency_files(start_dir="."):
+    found_files = []
+
+    # Walk through the directory recursively
+    for root, dirs, files in os.walk(start_dir):
+        for file in files:
+            # If the file matches any dependency file name, add it to the list
+            if file in dependency_files:
+                found_files.append(os.path.join(root))
+
+    return found_files
+
 
 def format_with_prettier(file_path):
     config_path = str(Path(__file__).parent / ".prettierrc.yaml")
