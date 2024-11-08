@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "playground"
+version = "0.1.0"
+description = ""
+authors = ["Bram van Meurs <7422223+bcvanmeurs@users.noreply.github.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+PyYAML = "^6.0.2"
+python-dotenv = "^1.0.1"
+tqdm = "^4.66.6"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

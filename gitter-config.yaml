@@ -1,0 +1,20 @@
+# dry-run: true
+interactive: true
+# specifics
+#
+commit-message: 'chore: update dependabot config with groups'
+pr-body: |
+  Update dependabot to use groups and only run weekly
+
+  Using prettier to format
+branch: MLOPS-702_dependabot
+# defaults
+#
+git-type: cmd
+conflict-strategy: replace
+org:
+  - adarga-ltd
+merge-type:
+  - squash
+# repos
+#
